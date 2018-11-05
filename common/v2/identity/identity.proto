@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package common.v2.identity;
+option go_package = "protos/common/v2/identity";
+
+// Contains identity data, should be part of each service procedure
+message Identity {
+    string RequestID = 1;
+    string JWT = 2;
+}

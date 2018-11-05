@@ -3,7 +3,7 @@ syntax = "proto3";
 package services.foobar;
 option go_package = "protos/services/foobar";
 
-import "common/v1/identity/identity.proto";
+import "common/v2/identity/identity.proto";
 import "services/foobar/types.proto";
 
 // FooBar servers as an example of how to make and version a service using .proto files
@@ -16,7 +16,7 @@ service FooBar {
 }
 
 message BuzzRequest {
-    common.v1.identity.Identity Identity = 1;
+    common.v2.identity.Identity Identity = 1;
     Buzzer Buzzer = 2;
 }
 message BuzzResponse {
@@ -24,7 +24,7 @@ message BuzzResponse {
 }
 
 message FizzRequest {
-    common.v1.identity.Identity Identity = 1;
+    common.v2.identity.Identity Identity = 1;
     Fizzer Fizzer = 2;
 }
 message FizzResponse {
