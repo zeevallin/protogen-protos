@@ -15,8 +15,16 @@ service FooBar {
     rpc Fizz(FizzRequest) returns (FizzResponse);
 }
 
-message BuzzRequest {}
-message BuzzResponse {}
+message BuzzRequest {
+    Buzzer Buzzer = 1;
+}
+message BuzzResponse {
+    Buzzer Buzzer = 1;
+}
 
-message FizzRequest {}
-message FizzResponse {}
+message FizzRequest {
+    Fizzer Fizzer = 1;
+}
+message FizzResponse {
+    Fizzer Fizzer = 1;
+}
