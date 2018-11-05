@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package services.games;
+option go_package = "protos/services/games";
+
+import "common/v1/identity/identity.proto";
+
+// Games servers as an example of how to make and version a service using .proto files
+service Games {
+    // Review bubbles intensily
+    rpc Review(ReviewRequest) returns (ReviewResponse);
+}
+
+enum Stars {
+    ONE_STAR = 1;
+    TWO_STARS = 2;
+    THREE_STARS = 3;
+    FOUR_STARS = 4;
+    FIVE_STARS = 5;
+}
+
+message ReviewRequest {
+    common.v1.identity.Identity Identity = 1;
+    Stars Score = 2;
+}
+message ReviewResponse {
+    Stars Score = 2;
+}
