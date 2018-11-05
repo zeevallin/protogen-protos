@@ -16,14 +16,16 @@ service FooBar {
 }
 
 message BuzzRequest {
-    Buzzer Buzzer = 1;
+    common.v1.identity.Identity Identity = 1;
+    Buzzer Buzzer = 2;
 }
 message BuzzResponse {
     Buzzer Buzzer = 1;
 }
 
 message FizzRequest {
-    Fizzer Fizzer = 1;
+    common.v1.identity.Identity Identity = 1;
+    Fizzer Fizzer = 2;
 }
 message FizzResponse {
     Fizzer Fizzer = 1;
