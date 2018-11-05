@@ -5,8 +5,10 @@ option go_package = "protos/services/foobar";
 
 message Fizzer {
     int64 Intensity = 1;
+    string Comment = 2;
 }
 
 message Buzzer {
     int64 Loudness = 1;
+    string Comment = 2;
 }
