@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package services.foobar;
+option go_package = "protos/services/foobar";
+
+import "common/v1/identity/identity.proto";
+import "services/foobar/types.proto";
+
+// FooBar servers as an example of how to make and version a service using .proto files
+service FooBar {
+    // Buzz buzzes loud
+    rpc Buzz(BuzzRequest) returns (BuzzResponse);
+
+    // Fizz bubbles intensily
+    rpc Fizz(FizzRequest) returns (FizzResponse);
+}
+
+message BuzzRequest {}
+message BuzzResponse {}
+
+message FizzRequest {}
+message FizzResponse {}

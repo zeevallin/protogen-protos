@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package services.foobar;
+option go_package = "protos/services/foobar";
+
+message Fizzer {
+    int64 Intensity = 1;
+}
+
+message Buzzer {
+    int64 Loudness = 1;
+}
