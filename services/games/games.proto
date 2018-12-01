@@ -12,11 +12,11 @@ service Games {
 }
 
 enum Stars {
-    ONE_STAR = 1;
-    TWO_STARS = 2;
-    THREE_STARS = 3;
-    FOUR_STARS = 4;
-    FIVE_STARS = 5;
+    ONE_STAR = 0;
+    TWO_STARS = 1;
+    THREE_STARS = 2;
+    FOUR_STARS = 3;
+    FIVE_STARS = 4;
 }
 
 message ReviewRequest {
